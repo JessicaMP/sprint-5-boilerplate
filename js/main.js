@@ -1,7 +1,7 @@
 (function begin() {
     $('.modal').modal();
 
-    /* Imprimir todos los temas del API */
+    /* Todos los temas del API */
     const themePage = function(temas) {
 
         temas.forEach(function(tema) {
@@ -10,7 +10,7 @@
           const autorTema = tema.author_name;
           const nRespuestas = tema.responses_count;
         
-        $('#view-theme').append(`<div class="col s5 card-panel teal box">
+        $('#view-theme').append(`<div class="col s12 l5 card-panel teal box">
                                 <div class="headerForo"><p class="white-text right-align">${'User: ' + autorTema}</p></div>
                                     <div class="mainForo">
                                     <a class=" pink-text lighten-4-text" href="verTopic.html?topic_id=${idTema}"><center><h5>${'TEMA: ' + subTema}</a></h5></center>
@@ -21,7 +21,7 @@
         });
       };
 
-    /* BUSCAR COINCIDENCIAS DE TEMAS */
+    /* COINCIDENCIAS DE TEMAS */
     const search = function(temas) {
         let agree = temas.map((val) => val.content);
         $('#search-btn').autocomplete({
@@ -29,13 +29,13 @@
         });
       };
 
-     /* FunciÃ³n para manejar errores */
+     /* Funcion para manejar errores */
      const error = function() {
         console.log('Se ha producido un error');  
       };
 
    
-      /* CONSEGUIR TODOS LOS TEMAS */
+      /* OBTENIENDO TODOS LOS TEMAS */
       $.ajax({
         url: 'https://examen-laboratoria-sprint-5.herokuapp.com/topics',
         // dataType: 'json',
@@ -46,7 +46,7 @@
     
         $('#view-theme').html('');
 
-    /* CREAR UN TEMA NUEVO AL DAR CLIC EN GUARDAR */
+    /* CREAR UN TEMA NUEVO*/
     $('#guardar').click(function() {
         let newAutor = $('#input-autor').val();
         let newTema = $('#input-sms').val();

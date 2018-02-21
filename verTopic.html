@@ -1,25 +1,75 @@
 <!-- Mostrar en este HTML las respuestas de cada topic -->
-
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+<html lang="en">
 
-    <h1>Aqui va el contenido de tema individual</h1>
-    <!-- Borar cuando se entienda como pasar info con topic id-->
-    <h1>Ingresa el topic id a este html usando la url.</h1>
-    <a href='verTopic.html?topic_id=2'>Algo asi</a><br/>
-    <a href='verTopic.html?topic_id=1'>O asi</a>
-    <!-- Borar cuando se entienda como pasar info con topic id-->
-    
-     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!--Materialize Css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Font-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
 
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <center>
+          <h5 class="left">Tema: </h5>
+          <h2 class="user-topic"></h2>
+          <center>
+            <h6 class="autor right"></h6>
+            <a class="waves-effect waves-light btn modal-trigger" href="#modal2">Crear Respuesta</a>
+      </div>
+    </div>
+  </header>
+  <!-- Modal Structure -->
+  <div id="modal2" class="modal teal accent-1">
+    <div class="modal-content">
+      <center>
+        <h4 class="white-text">Crear una Respuesta</h4>
+      </center>
+      <div class="row">
+        <form class="col s8 offset-s2">
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix title">account_circle</i>
+              <input type="text" id="author" placeholder="author">
+              <input id="input-autor" type="text" class="validate">
+              <label for="icon_prefix">Usuario</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix title">message</i>
+              <input id="message" type="tel" class="validate">
+              <label for="icon_telephone">Mensaje</label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal-footer teal accent-1">
+      <a id="crearrespuesta" href="#!" class="modal-action btn-modal white-text modal-close waves-effect waves-green btn-flat">Crear Tema</a>
+    </div>
+  </div>
+  <!-- Insertar respuesta -->
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="respuestas"></div>
+      </div>
+    </div>
+  </main>
+  <!--jQuery-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!--Materialize Js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="js/functions.js"></script>
+  <script src="js/verTopic.js"></script>
+</body>
 
-    <script src="js/functions.js"></script>
-    <script src="js/verTopic.js"></script>
-  </body>
 </html>
