@@ -26,3 +26,9 @@ body {
 .btn-modal {
     background-color: #f36;
 }
+
+.box {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1rem;
+}
