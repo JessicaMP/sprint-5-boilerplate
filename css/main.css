@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+.title {
+    color: #f36;
+    font-weight: bolder;
+}
+
+.rosa {
+    background-color: #fed6ce;
+    border-radius: 0.5rem;
+}
+
+.btn-color {
+    background-color: #0b8;
+}
+
+.btn-modal {
+    background-color: #f36;
+}
